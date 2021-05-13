@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3"><h4>Notifcaciones</h4></div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <p>Esto es un prototipo de notificación para implementar en las tareas .</p>
+            <br/>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Mensaje</label>
+                        <smart-input id="messageInput" placeholder="Enter a message" value="Ejemplo de notificacion"></smart-input>
+                        <label>Tipo</label>
+                        <smart-input id="typeInput" data-source='["info", "warning", "success", "error", "mail", "time"]' drop-down-button-position="right" readonly value="warning"></smart-input>
+                        <smart-check-box id="enableAutoClose" checked>Cerrar automáticamente</smart-check-box>
+                        <smart-check-box id="enableBlink" checked>Parpadear</smart-check-box>
+                        <smart-check-box id="enableCloseButton" checked>Botón de cerrar</smart-check-box>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Posición</label>
+                        <smart-radio-button id="topLeft">Arriba a la izquierda</smart-radio-button>
+                        <smart-radio-button id="topRight">Arriba a la derecha</smart-radio-button>
+                        <smart-radio-button id="bottomLeft">Abajo a la izquierda</smart-radio-button>
+                        <smart-radio-button id="bottomRight" checked>Abajo a la derecha</smart-radio-button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <smart-button id="show" class="small-button primary">Mostrar notificación</smart-button>
+                <smart-button id="clearAll" class="small-button primary outlined">Quitar notificaciones</smart-button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<smart-toast id="toast" class="blink" auto-close position="bottom-right" show-close-button type="warning">Ejemplo de notificación</smart-toast>
